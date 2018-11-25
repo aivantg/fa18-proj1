@@ -1,7 +1,10 @@
 <h3>Welcome to PokePortal</h3>
 <p><%= link_to 'Trainers:', trainers_path %> <%= Trainer.count %> registered</p>
 
+<%= @pokemon %>
+<%= current_trainer %>
 <% if @pokemon and current_trainer %>
+  <p>WOOOO</p>
   <% if @pokemon.ndex %>
     <%= image_tag("pokemon/#{@pokemon.ndex}.png", alt: "pokemon") %>
   <% end %>
